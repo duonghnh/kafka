@@ -15,3 +15,10 @@ curl -X POST -H "Accept:application/json" -H "Content-Type:application/json" loc
         "database.history.kafka.topic": "schema-changes.inventory"
     }
 }'
+
+
+wget -qO - http://packages.confluent.io/deb/3.1/archive.key | sudo apt-key add -
+
+sudo add-apt-repository "deb [arch=amd64] http://packages.confluent.io/deb/3.1 stable main"
+
+sudo apt-get update && sudo apt-get install confluent-platform-2.11
